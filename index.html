@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue-demo</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id = 'app'>
+		<h1>{{ message }}</h1>
+		<ul id="v-for-object" class="demo">
+			<li v-for="value in object">
+				{{ value }}
+			</li>
+		</ul>
+		<div id="example-1">
+		  <button v-on:click="counter += 1">Add 1</button>
+		  <p>The button above has been clicked {{ counter }} times.</p>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var app = new Vue({
+		el: '#app',
+		data: {
+			message: "Hello vue",
+			object: {
+				firsName: 'John',
+				lastName: 'Nick',
+				age: 30
+			},
+			counter: 0
+		}
+	})
+</script>
+</html>
